@@ -3,6 +3,11 @@
 # personalized
 data/
 package-lock.json
+public/frameworks/
+public/languages/
+public/projects/
+public/bg/
+*.zip
 
 # dependencies
 /node_modules

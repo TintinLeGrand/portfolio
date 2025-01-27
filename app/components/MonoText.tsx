@@ -14,7 +14,7 @@ export function MonoText({
     className,
     children
   }: Readonly<{
-    className: string;
+    className?: string;
     children: React.ReactNode;
   }>) {
     return (

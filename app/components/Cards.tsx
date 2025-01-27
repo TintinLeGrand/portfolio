@@ -1,7 +1,27 @@
 'use client';
 
-import { MonoText } from './MonoText';
+import { MonoText, MonoTitle } from './MonoText';
 import { CircularProgress } from "@nextui-org/react";
+import { Card, Avatar, Popover, CustomFlowbiteTheme } from "flowbite-react";
+import Link from 'next/link';
+import Image from 'next/image';
+import frPack from "@/data/fr/main.json";
+
+const sentences = frPack;
+
+const customCard: CustomFlowbiteTheme['card'] = {
+    img: {
+        base: 'rounded-lg max-w-sm lg:max-w-lg',
+    },
+    root: {
+        base: 'bg-white dark:bg-black border-2 border-black dark:border-white rounded-lg shadow-lg max-w-sm lg:max-w-lg overflow-hidden',
+        children: 'bg-white dark:bg-black rounded-lg text-justify p-4',
+    }
+};
+
+const customPopover: CustomFlowbiteTheme['popover'] = {
+    content: 'bg-white dark:bg-black border-2 border-black dark:border-white rounded-lg shadow-lg p-2',
+};
 
 export function ElementCard({
     name,
@@ -40,12 +60,92 @@ export function ElementCard({
                     }}
                     strokeWidth={2}
                     value={value} />
-                <img src={url} alt={`${name} application icon`} className='aspect-auto strokelim max-w-24 max-h-24' />
+                <img src={url} alt={`${name} application icon`} className='max-w-24 max-h-24' />
             </div>
             <MonoText className="text-lg md:text-xl max-w-24 mt-4">{name}</MonoText>
             <p className='text-sm'>
                 {knowledge.text}
             </p>
         </div>
+    );
+}
+
+export function ProjectCard({
+    name,
+    url,
+    description,
+    mates,
+    technologies,
+    frameworks,
+    link
+}: Readonly<{
+    name: string;
+    url: string;
+    link?: string;
+    description: string;
+    mates: Array<string>;
+    technologies: Array<string>;
+    frameworks: Array<string>;
+}>) {
+    return (
+        <Card
+            theme={customCard}
+        >
+            <div className="relative w-full max-w-sm lg:max-w-lg aspect-[16/9] overflow-hidden">
+                <img src={url} alt="Description" className="absolute inset-0 w-full h-full object-cover object-top" />
+                {url.includes('/bg/') && (
+                    <MonoTitle className="absolute inset-0 flex items-center justify-center z-50 text-black text-xl">
+                        {sentences.noPicture}
+                    </MonoTitle>
+                )}
+            </div>
+            <div className='grid grid-cols-2 gap-2 mt-4'>
+                <div className='flex flex-col justify-center items-center'>
+                    <MonoText>Technologies</MonoText>
+                    <div className='flex flex-wrap justify-center -space-x-1'>
+                        {technologies.map((technologie) => (
+                            <div className='overflow-hidden'>
+                                <Popover content={<p>{technologie}</p>} trigger='hover' placement="top" theme={customPopover}>
+                                    <Avatar size='md' img={`/languages/${technologie}.png`} className='bg-white rounded-full border border-black overflow-hidden' rounded />
+                                </Popover>
+                            </div>
+                        ))}
+                    </div>
+                </div>
+                <div className='flex flex-col justify-center items-center'>
+                    <MonoText>Frameworks</MonoText>
+                    <div className='flex flex-wrap justify-center -space-x-1'>
+                        {frameworks.map((framework) => (
+                            <div className='overflow-hidden'>
+                                <Popover content={<p>{framework}</p>} trigger='hover' placement="top" theme={customPopover}>
+                                    <Avatar size='md' img={`/frameworks/${framework.replace(/ /g, '-')}.png`} className='bg-white rounded-full border border-black overflow-hidden' rounded />
+                                </Popover>
+                            </div>
+                        ))}
+                    </div>
+                </div>
+            </div>
+            <hr className='my-4 border border-black dark:border-white' />
+            <div className='flex flex-wrap gap-2 items-center'>
+                <MonoText>By</MonoText>
+                <Avatar.Group>
+                    {mates.map((mate) => (
+                        <Link href={`https://github.com/${mate}`} target='_blank'>
+                            <Popover content={<p>{mate}</p>} trigger='hover' placement="top" theme={customPopover}>
+                                <Avatar size='md' img={`https://github.com/${mate}.png`} rounded stacked />
+                            </Popover>
+                        </Link>
+                    ))}
+                </Avatar.Group>
+            </div>
+            <div onClick={link ? () => window.open(link, '_blank') : undefined} className='cursor-pointer hover:underline'>
+                <MonoTitle className={'text-2xl lg:text-3xl font-bold tracking-tight'}>
+                    {name}
+                </MonoTitle>
+                <MonoText>
+                    {description}
+                </MonoText>
+            </div>
+        </Card>
     );
 }

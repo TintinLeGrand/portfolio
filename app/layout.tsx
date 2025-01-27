@@ -37,6 +37,14 @@ export const metadata: Metadata = {
   category: "Portfolio",
 };
 
+function Loading() {
+  return (
+    <div>
+      <h1 className="mb-4 text-4xl font-extrabold tracking-tight leading-none md:text-5xl lg:text-6xl">{sentences.loading}</h1>
+    </div>
+  );
+}
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -45,12 +53,12 @@ export default function RootLayout({
   return (
     <html lang="fr">
       <body
-        className={`${ubuntuSans.variable} ${ubuntuSansMono.variable} select-none bg-[url('/wave.jpg')] bg-fixed bg-cover bg-center antialiased flex flex-col min-h-screen font-sans`}
+        className={`${ubuntuSans.variable} ${ubuntuSansMono.variable} select-none bg-[url('/wave.jpg')] bg-fixed bg-cover bg-center anti  aliased flex flex-col min-h-screen font-sans`}
       >
         <div className="w-screen h-screen fixed bg-black bg-opacity-0 dark:bg-opacity-60 -z-50" />
         <Header />
         <main className="bg-white dark:bg-black bg-opacity-90 dark:bg-opacity-70 dark:font-normal font-semibold p-4 gap-4 rounded-xl mx-4 my-8 border-black dark:border-white border-2 flex-grow z-0 flex items-center justify-center text-center">
-          <Suspense fallback={sentences.loading}>
+          <Suspense fallback={<Loading/>}>
             {children}
           </Suspense>
         </main>

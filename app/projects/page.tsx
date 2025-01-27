@@ -1,8 +1,12 @@
-import { MonoText } from "../components/MonoText";
+import { MonoText, MonoTitle } from "../components/MonoText";
 import { MainHeader } from "../components/PageSkeleton";
+import { ProjectCard } from "../components/Cards";
+import projectList from "@/data/fr/projects.json";
 import frPack from "@/data/fr/main.json";
 
 const sentences = frPack;
+const currentProjects = projectList.en_cours;
+const futureProjects = projectList.futurs;
 
 export default function Projects() {
   return (
@@ -11,7 +15,44 @@ export default function Projects() {
         <MonoText className="text-lg md:text-2xl max-w-96">{sentences.projectsDetails}</MonoText>
       </MainHeader>
       <hr className="mx-4 border-black dark:border-white border rounded-full" />
-      <MonoText className="text-lg md:text-2xl">Je n'ai pas encore fini de réaliser mon portfolio, vous pourrez revenir très vite voir mes projets !</MonoText>
+      <div>
+        <MonoTitle className="text-3xl md:text-5xl font-semibold">{sentences.currentProjects}</MonoTitle>
+        <div className="flex flex-wrap gap-4 justify-center py-4">
+          {
+            Object.entries(currentProjects).map(([key, { name, description, image, frameworks, technologies, workers, link }]) => (
+              <ProjectCard
+                key={key + name.toString()}
+                name={name}
+                url={image}
+                description={description}
+                mates={workers}
+                technologies={technologies}
+                frameworks={frameworks}
+                link={link}
+              />
+            ))
+          }
+        </div>
+      </div>
+      <hr className="mx-4 border-black dark:border-white border rounded-full" />
+      <div>
+        <MonoTitle className="text-3xl md:text-5xl font-semibold">{sentences.futureProjects}</MonoTitle>
+        <div className="flex flex-wrap gap-4 justify-center py-4">
+          {
+            Object.entries(futureProjects).map(([key, { name, description, image, frameworks, technologies, workers }]) => (
+              <ProjectCard
+                key={key}
+                name={name}
+                url={image}
+                description={description}
+                mates={workers}
+                technologies={technologies}
+                frameworks={frameworks}
+              />
+            ))
+          }
+        </div>
+      </div>
     </div>
   );
 }

@@ -1,13 +1,13 @@
 "use client";
 
 import Link from "next/link";
-import { Navbar, Button, Popover } from "flowbite-react";
+import { Navbar, Button, Popover, Spinner, CustomFlowbiteTheme } from "flowbite-react";
 import Image from "next/image";
-import type { CustomFlowbiteTheme } from "flowbite-react";
 import { IoNavigateOutline, IoLogoGithub, IoLogoLinkedin } from "react-icons/io5";
 import { RiBlueskyFill } from "react-icons/ri";
 import frPack from "@/data/fr/main.json";
 import profile from "@/data/fr/profile.json";
+import { Suspense } from "react";
 
 const sentences = frPack;
 
@@ -87,7 +87,9 @@ export function Header() {
     return (
         <Navbar theme={customHeader} fluid className="mx-4 my-2 z-50">
             <Navbar.Brand as={Link} replace href="/">
-                <img src="/tiny-profilePicture.png" className="h-8 sm:h-12 rounded-full border-black dark:border-white border-2" alt="Picture of myself" />
+                <Suspense fallback={<div className="h-8 w-8 sm:h-12 sm:w-12 flex justify-center items-center rounded-full border-black dark:border-white border-2"><Spinner color="info" aria-label="Info spinner example" /></div>}>
+                    <img src="/tiny-profilePicture.png" className="h-8 sm:h-12 rounded-full border-black dark:border-white border-2" alt="Picture of myself" />
+                </Suspense>
                 <h1 className="self-center whitespace-nowrap text-xl font-semibold dark:text-white">
                     {sentences.porfolio}
                 </h1>
