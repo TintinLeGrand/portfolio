@@ -106,7 +106,7 @@ export function ProjectCard({
                         {technologies.map((technologie) => (
                             <div className='overflow-hidden'>
                                 <Popover content={<p>{technologie}</p>} trigger='hover' placement="top" theme={customPopover}>
-                                    <Avatar size='md' img={`/languages/${technologie}.png`} className='bg-white rounded-full border border-black overflow-hidden' rounded />
+                                    <Avatar size='md' img={`/languages/${technologie.toLowerCase().replace(/ /g, '-')}.png`} className='bg-white rounded-full border border-black overflow-hidden' rounded />
                                 </Popover>
                             </div>
                         ))}
@@ -118,7 +118,7 @@ export function ProjectCard({
                         {frameworks.map((framework) => (
                             <div className='overflow-hidden'>
                                 <Popover content={<p>{framework}</p>} trigger='hover' placement="top" theme={customPopover}>
-                                    <Avatar size='md' img={`/frameworks/${framework.replace(/ /g, '-')}.png`} className='bg-white rounded-full border border-black overflow-hidden' rounded />
+                                    <Avatar size='md' img={`/frameworks/${framework.toLowerCase().replace(/ /g, '-')}.png`} className='bg-white rounded-full border border-black overflow-hidden' rounded />
                                 </Popover>
                             </div>
                         ))}

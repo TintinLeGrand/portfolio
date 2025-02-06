@@ -2,11 +2,23 @@ import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
   images: {
-    domains: [
-      "nextjs.org",
-      "upload.wikimedia.org",
-      "raw.githubusercontent.com",
-      "static.wikia.nocookie.net",
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 'nextjs.org',
+      },
+      {
+        protocol: 'https',
+        hostname: 'upload.wikimedia.org',
+      },
+      {
+        protocol: 'https',
+        hostname: 'raw.githubusercontent.com',
+      },
+      {
+        protocol: 'https',
+        hostname: 'static.wikia.nocookie.net',
+      },
     ],
   }
 };
