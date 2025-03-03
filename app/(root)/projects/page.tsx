@@ -1,12 +1,19 @@
-import { MonoText, MonoTitle } from "../components/MonoText";
-import { MainHeader } from "../components/PageSkeleton";
-import { ProjectCard } from "../components/Cards";
+import { MonoText, MonoTitle } from "../../components/MonoText";
+import { MainHeader } from "../../components/PageSkeleton";
+import { ProjectCard } from "../../components/Cards";
 import projectList from "@/data/fr/projects.json";
 import frPack from "@/data/fr/main.json";
+import { Metadata } from "next";
 
 const sentences = frPack;
 const currentProjects = projectList.en_cours;
 const futureProjects = projectList.futurs;
+
+export const metadata: Metadata = {
+  title: "Projets - Ethan Le Neindre",
+  description: `Voici mes projets actuels et futurs.`,
+  robots: "index, follow",
+};
 
 export default function Projects() {
   return (

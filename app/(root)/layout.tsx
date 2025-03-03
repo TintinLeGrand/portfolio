@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
 import { Ubuntu_Sans_Mono, Ubuntu_Sans } from "next/font/google";
-import { Header, Footer } from "./components/PageSkeleton";
+import { Header, Footer } from "../components/PageSkeleton";
 import { Suspense } from "react";
-import "./globals.css";
+import "../globals.css";
 import sentences from "@/data/fr/main.json";
 
 const ubuntuSans = Ubuntu_Sans({

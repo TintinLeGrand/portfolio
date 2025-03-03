@@ -1,14 +1,21 @@
-import { MonoText, MonoTitle } from "../components/MonoText";
+import { MonoText, MonoTitle } from "../../components/MonoText";
 import profileData from "@/data/fr/profile.json";
 import frPack from "@/data/fr/main.json";
-import { MainHeader } from "../components/PageSkeleton";
-import { ElementCard } from "../components/Cards";
+import { MainHeader } from "../../components/PageSkeleton";
+import { ElementCard } from "../../components/Cards";
+import { Metadata } from "next";
 
 const sentences = frPack;
 const profile = profileData;
 const frameworks = profile.skills.frameworks;
 const languages = profile.skills.languages;
 const tools = profile.skills.tools;
+
+export const metadata: Metadata = {
+  title: "Compétences - Ethan Le Neindre",
+  description: "Voici la liste de mes compétences, à titre de représentation.",
+  robots: "index, follow",
+};
 
 export default function Skills() {
   return (

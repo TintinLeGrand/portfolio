@@ -1,12 +1,19 @@
-import { MonoText } from "../components/MonoText";
+import { MonoText } from "../../components/MonoText";
 import frPack from "@/data/fr/main.json";
-import { MainHeader } from "../components/PageSkeleton";
+import { MainHeader } from "../../components/PageSkeleton";
 import { IoLogoGithub, IoLogoLinkedin } from "react-icons/io5";
 import { RiBlueskyFill } from "react-icons/ri";
 import profile from "@/data/fr/profile.json";
-import { TextButton } from "../components/Buttons";
+import { TextButton } from "../../components/Buttons";
+import { Metadata } from "next";
 
 const sentences = frPack;
+
+export const metadata: Metadata = {
+  title: "Liens - Ethan Le Neindre",
+  description: "Retrouvez ici tous les liens utiles pour en savoir plus sur moi, et me contacter.",
+  robots: "index, follow",
+};
 
 export default function Links() {
   return (

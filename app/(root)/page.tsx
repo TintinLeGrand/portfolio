@@ -1,8 +1,8 @@
-import { MonoText, MonoTitle } from "./components/MonoText";
-import { TextButton } from "./components/Buttons";
+import { MonoText, MonoTitle } from "../components/MonoText";
+import { TextButton } from "../components/Buttons";
 import profileData from "@/data/fr/profile.json";
 import frPack from "@/data/fr/main.json";
-import { MainHeader } from "./components/PageSkeleton";
+import { MainHeader } from "../components/PageSkeleton";
 
 const sentences = frPack;
 
@@ -25,7 +25,8 @@ export default function Home() {
       <div className="flex gap-4 items-center flex-wrap justify-center">
         <TextButton href="/skills">{sentences.skills}</TextButton>
         <TextButton href="/projects">{sentences.projects}</TextButton>
-        <TextButton href="links">{sentences.links}</TextButton>
+        <TextButton href="/links">{sentences.links}</TextButton>
+        <TextButton href="/documents/cv">{sentences.cv}</TextButton>
       </div>
     </div>
   );

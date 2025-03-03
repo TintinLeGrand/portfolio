@@ -23,3 +23,23 @@ body {
 h1, h2, h3, p, ul *{
   opacity: 100% !important;
 }
+
+.light-border {
+  border-width: 0.1mm;
+}
+
+.light-border-b {
+  border-bottom-width: 0.1mm;
+}
+
+.light-border-r {
+  border-right-width: 0.1mm;
+}
+
+.light-border-l {
+  border-left-width: 0.1mm;
+}
+
+.light-border-t {
+  border-top-width: 0.1mm;
+}
