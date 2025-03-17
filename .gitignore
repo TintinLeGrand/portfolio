@@ -1,13 +1,12 @@
 # See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
 
 # personalized
-data/
-package-lock.json
-public/frameworks/
-public/languages/
-public/projects/
-public/bg/
+/public
 *.zip
+*-lock*
+/data
+/locales/en.ts
+/locales/fr.ts
 
 # dependencies
 /node_modules

@@ -59,9 +59,9 @@ export function Header() {
           <li className="flex items-center justify-end text-right gap-1">
             <Link
               className="underline underline-offset-[1mm]"
-              href={"https://jvaiscaennais.com"}
+              href={"https://ethanleneind.re"}
             >
-              https://jvaiscaennais.com
+              https://ethanleneind.re
             </Link>
             <span>
               <RiLinksFill />

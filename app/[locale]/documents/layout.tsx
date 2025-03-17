@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Ubuntu_Sans_Mono, Ubuntu_Sans } from "next/font/google";
+import { Providers } from "@/app/providers";
 import "../globals.css";
 
 const ubuntuSans = Ubuntu_Sans({
@@ -25,7 +26,7 @@ const age =
 export const metadata: Metadata = {
   title: "Documents - Ethan Le Neindre",
   description: "Voici la liste de mes documents à disposition.",
-  authors: [{ name: "Ethan Le Neindre", url: "https://jvaiscaennais.com" }],
+  authors: [{ name: "Ethan Le Neindre", url: "https://ethanleneind.re" }],
   robots: "index, follow",
   keywords: [
     "Ethan Le Neindre",
@@ -47,15 +48,19 @@ export const metadata: Metadata = {
 
 export default function RootLayout({
   children,
+  params,
 }: Readonly<{
   children: React.ReactNode;
+  params: { locale: string };
 }>) {
   return (
     <html lang="fr">
       <body
-        className={`${ubuntuSans.variable} ${ubuntuSansMono.variable} bg-none flex flex-col justify-center items-center py-4 gap-4 print:hidden`}
+        className={`${ubuntuSans.variable} ${ubuntuSansMono.variable} bg-black flex flex-col justify-center items-center py-4 gap-4 print:hidden`}
       >
-        {children}
+        <Providers locale={params.locale}>
+          {children}
+        </Providers>
       </body>
     </html>
   );

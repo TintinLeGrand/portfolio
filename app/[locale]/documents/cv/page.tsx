@@ -14,11 +14,12 @@ import { FaEarthEurope } from "react-icons/fa6";
 import { SiNextdotjs } from "react-icons/si";
 import { LiaDocker } from "react-icons/lia";
 import { Block, Header } from "./components";
-import { DatedTimeline } from "@/app/components/Timelines";
-import { ActionButton, TextButton } from "@/app/components/Buttons";
+import { DatedTimeline } from "@/components/Timelines";
+import { ActionButton, TextButton } from "@/components/Buttons";
 import { downloadPDF, downloadPNG } from "../download";
-import { DisplayAlert } from "@/app/components/Alert";
+import { DisplayAlert } from "@/components/Alert";
 import { useRef } from "react";
+import { useScopedI18n } from "@/locales/client";
 
 const jobs = [
   {
@@ -94,9 +95,7 @@ const studies = [
     title: "Baccalauréat générale, mention Très Bien",
     body: (
       <ul>
-        <li className="italic">
-          Lycée Alexis de Tocqueville, Cherbourg
-        </li>
+        <li className="italic">Lycée Alexis de Tocqueville, Cherbourg</li>
         <li>
           Spécialités Mathématiques, NSI (Numérique et Sciences Informatique) et
           LLCE Anglais (jusqu’en première).
@@ -109,6 +108,7 @@ const studies = [
 
 export default function Page() {
   const documentRef = useRef<HTMLDivElement>(null);
+  const t = useScopedI18n("documents");
 
   return (
     <div>
@@ -131,11 +131,9 @@ export default function Page() {
                 <ul>
                   <li>Français : langue maternelle</li>
                   <li>
-                    Anglais : B2, certifié (<b>Cambridge Assessment</b> 2022)
+                    Anglais : B2, certifié (<b>Cambridge Assessment</b>, TOEIC <b>895</b>)
                   </li>
-                  <li>
-                    Italien : B1 (LV2 au collège et lycée)
-                  </li>
+                  <li>Italien : B1 (LV2 au collège et lycée)</li>
                 </ul>
               </Block>
               <Block bordered title="Langages et frameworks">
@@ -230,10 +228,10 @@ export default function Page() {
       </main>
       <div className="flex justify-between w-[210mm] pt-[8mm] print:hidden select-none">
         <div>
-          <TextButton href={"/"}>Retour</TextButton>
+          <TextButton href={"/documents"}>{t("buttons.back")}</TextButton>
         </div>
         <div className="flex gap-4 items-center">
-          <p className="text-white">Exporter vers :</p>
+          <p className="text-white">{t("export")}</p>
           <ActionButton action={() => downloadPDF(documentRef.current)}>
             PDF
           </ActionButton>
