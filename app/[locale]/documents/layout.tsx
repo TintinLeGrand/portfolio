@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { Ubuntu_Sans_Mono, Ubuntu_Sans } from "next/font/google";
 import { Providers } from "@/app/providers";
-import "../globals.css";
+import "../../globals.css";
 
 const ubuntuSans = Ubuntu_Sans({
   variable: "--font-ubuntu-sans",
@@ -46,21 +46,21 @@ export const metadata: Metadata = {
   category: "Portfolio",
 };
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
   params,
 }: Readonly<{
   children: React.ReactNode;
-  params: { locale: string };
+  params: Promise<{ locale: string }>;
 }>) {
+  const { locale } = await params;
+
   return (
-    <html lang="fr">
+    <html lang={locale}>
       <body
         className={`${ubuntuSans.variable} ${ubuntuSansMono.variable} bg-black flex flex-col justify-center items-center py-4 gap-4 print:hidden`}
       >
-        <Providers locale={params.locale}>
-          {children}
-        </Providers>
+        <Providers locale={locale}>{children}</Providers>
       </body>
     </html>
   );

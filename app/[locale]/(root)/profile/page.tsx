@@ -2,14 +2,7 @@
 
 import { MonoText, MonoTitle } from "@/components/MonoText";
 import { MainHeader } from "@/components/PageSkeleton";
-import { Metadata } from "next";
 import { useScopedI18n } from "@/locales/client";
-
-// export const metadata: Metadata = {
-//   title: "Projets - Ethan Le Neindre",
-//   description: `Voici mes projets actuels et futurs.`,
-//   robots: "index, follow",
-// };
 
 export default function Projects() {
   const t = useScopedI18n("profile");

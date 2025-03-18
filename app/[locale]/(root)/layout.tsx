@@ -3,7 +3,8 @@ import { Providers } from "../../providers";
 import { Header, Footer } from "@/components/PageSkeleton";
 import { Ubuntu_Sans_Mono, Ubuntu_Sans } from "next/font/google";
 import { Suspense } from "react";
-import "../globals.css";
+import calcAge from "@/lib/age";
+import "../../globals.css";
 
 const ubuntuSans = Ubuntu_Sans({
   variable: "--font-ubuntu-sans",
@@ -17,13 +18,7 @@ const ubuntuSansMono = Ubuntu_Sans_Mono({
   weight: "400",
 });
 
-const birth = new Date("2004-07-16");
-const now = new Date();
-const age =
-  now.getMonth() > birth.getMonth() ||
-  (now.getMonth() === birth.getMonth() && now.getDate() >= birth.getDate())
-    ? now.getFullYear() - birth.getFullYear()
-    : now.getFullYear() - birth.getFullYear() - 1;
+const age= calcAge;
 
 export const metadata: Metadata = {
   title: "Portfolio - Ethan Le Neindre",
@@ -63,12 +58,12 @@ export default async function RootLayout({
   params,
 }: Readonly<{
   children: React.ReactNode;
-  params: { locale: string };
+  params: Promise<{ locale: string }>;
 }>) {
   const { locale } = await params;
 
   return (
-    <html lang="fr">
+    <html lang={locale}>
       <body
         className={`${ubuntuSans.variable} ${ubuntuSansMono.variable} select-none bg-[url('/wave.jpg')] bg-fixed bg-cover bg-center antialiased flex flex-col min-h-screen font-sans`}
       >

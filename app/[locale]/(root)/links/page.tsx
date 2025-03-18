@@ -6,14 +6,7 @@ import { IoLogoGithub, IoLogoLinkedin } from "react-icons/io5";
 import { RiBlueskyFill } from "react-icons/ri";
 import links from "@/data/links.json";
 import { TextButton } from "@/components/Buttons";
-import { Metadata } from "next";
 import { useScopedI18n } from "@/locales/client";
-
-// export const metadata: Metadata = {
-//   title: "Liens - Ethan Le Neindre",
-//   description: "Retrouvez ici tous les liens utiles pour en savoir plus sur moi, et me contacter.",
-//   robots: "index, follow",
-// };
 
 export default function Links() {
   const t = useScopedI18n("links");
