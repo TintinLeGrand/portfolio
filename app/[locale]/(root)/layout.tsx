@@ -18,7 +18,7 @@ const ubuntuSansMono = Ubuntu_Sans_Mono({
   weight: "400",
 });
 
-const age= calcAge;
+const age = calcAge;
 
 export const metadata: Metadata = {
   title: "Portfolio - Ethan Le Neindre",
@@ -52,6 +52,7 @@ export const metadata: Metadata = {
   publisher: "Ethan Le Neindre",
   category: "Portfolio",
 };
+import { SpeedInsights } from "@vercel/speed-insights/next";
 
 export default async function RootLayout({
   children,
@@ -70,6 +71,7 @@ export default async function RootLayout({
         <div className="w-screen h-screen fixed bg-black bg-opacity-0 dark:bg-opacity-60 -z-50" />
         <Providers locale={locale}>
           <Header />
+          <SpeedInsights />
           <main className="bg-white dark:bg-black text-black dark:text-white bg-opacity-90 dark:bg-opacity-70 dark:font-normal font-semibold p-4 gap-4 rounded-xl mx-4 my-8 border-black dark:border-white border-2 flex-grow z-0 flex items-center justify-center text-center ease-out duration-700 transition-all transition-discrete">
             <Suspense fallback={<p>Loading...</p>}>{children}</Suspense>
           </main>
