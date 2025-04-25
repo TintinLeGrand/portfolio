@@ -1,0 +1,192 @@
+{
+    "skills": {
+        "languages": {
+            "Javascript": {
+                "knowledge": {
+                    "text": "advanced",
+                    "value": 65
+                },
+                "url": "https://logos-download.com/wp-content/uploads/2019/01/JavaScript_Logo.png"
+            },
+            "Python": {
+                "knowledge": {
+                    "text": "advanced",
+                    "value": 65
+                },
+                "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Python-logo-notext.svg/1200px-Python-logo-notext.svg.png"
+            },
+            "C#": {
+                "knowledge": {
+                    "text": "intermediate",
+                    "value": 40
+                },
+                "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d2/C_Sharp_Logo_2023.svg/1200px-C_Sharp_Logo_2023.svg.png"
+            },
+            "HTML": {
+                "knowledge": {
+                    "text": "expert",
+                    "value": 90
+                },
+                "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/HTML5_logo_and_wordmark.svg/1200px-HTML5_logo_and_wordmark.svg.png"
+            },
+            "CSS": {
+                "knowledge": {
+                    "text": "expert",
+                    "value": 90
+                },
+                "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ab/Official_CSS_Logo.svg/langfr-1920px-Official_CSS_Logo.svg.png"
+            },
+            "PhP": {
+                "knowledge": {
+                    "text": "expert",
+                    "value": 90
+                },
+                "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/27/PHP-logo.svg/1200px-PHP-logo.svg.png"
+            },
+            "SQL": {
+                "knowledge": {
+                    "text": "expert",
+                    "value": 90
+                },
+                "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d7/Sql_data_base_with_logo.svg/1540px-Sql_data_base_with_logo.svg.png"
+            },
+            "Dart": {
+                "knowledge": {
+                    "text": "beginner",
+                    "value": 15
+                },
+                "url": "https://upload.wikimedia.org/wikipedia/commons/7/7e/Dart-logo.png"
+            },
+            "Java": {
+                "knowledge": {
+                    "text": "expert",
+                    "value": 90
+                },
+                "url": "https://upload.wikimedia.org/wikipedia/fr/2/2e/Java_Logo.svg"
+            },
+            "Kotlin": {
+                "knowledge": {
+                    "text": "advanced",
+                    "value": 65
+                },
+                "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/06/Kotlin_Icon.svg/1200px-Kotlin_Icon.svg.png"
+            },
+            "C": {
+                "knowledge": {
+                    "text": "intermediate",
+                    "value": 40
+                },
+                "url": "https://upload.wikimedia.org/wikipedia/commons/1/19/C_Logo.png"
+            },
+            "Swift": {
+                "knowledge": {
+                    "text": "project",
+                    "value": 0
+                },
+                "url": "https://developer.apple.com/swift/images/swift-og.png"
+            },
+            "TypeScript": {
+                "knowledge": {
+                    "text": "intermediate",
+                    "value": 40
+                },
+                "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Typescript_logo_2020.svg/1200px-Typescript_logo_2020.svg.png"
+            }
+        },
+        "frameworks": {
+            "Laravel": {
+                "knowledge": {
+                    "text": "expert",
+                    "value": 90
+                },
+                "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Laravel.svg/1200px-Laravel.svg.png"
+            },
+            "TailwindCSS": {
+                "knowledge": {
+                    "text": "expert",
+                    "value": 90
+                },
+                "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/Tailwind_CSS_Logo.svg/1540px-Tailwind_CSS_Logo.svg.png"
+            },
+            "Flowbite": {
+                "knowledge": {
+                    "text": "expert",
+                    "value": 90
+                },
+                "url": "https://flowbite.s3.amazonaws.com/brand/logo-dark/mark/flowbite-logo.png"
+            },
+            "Next.JS": {
+                "knowledge": {
+                    "text": "advanced",
+                    "value": 65
+                },
+                "url": "https://raw.githubusercontent.com/github/explore/2ebcebd7b163b2ab12cb5a40bf29264799c81c03/topics/nextjs/nextjs.png"
+            },
+            "Expo": {
+                "knowledge": {
+                    "text": "beginner",
+                    "value": 15
+                },
+                "url": "/frameworks/expo.png"
+            },
+            "Flutter": {
+                "knowledge": {
+                    "text": "beginner",
+                    "value": 15
+                },
+                "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/79/Flutter_logo.svg/2048px-Flutter_logo.svg.png"
+            },
+            "React": {
+                "knowledge": {
+                    "text": "advanced",
+                    "value": 65
+                },
+                "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/640px-React-icon.svg.png"
+            }
+        },
+        "tools": {
+            "Git": {
+                "knowledge": {
+                    "text": "expert",
+                    "value": 90
+                },
+                "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/Git_icon.svg/1200px-Git_icon.svg.png"
+            },
+            "GitHub": {
+                "knowledge": {
+                    "text": "advanced",
+                    "value": 65
+                },
+                "url": "https://cdn4.iconfinder.com/data/icons/social-media-logos-6/512/71-github-512.png"
+            },
+            "VSCode": {
+                "knowledge": {
+                    "text": "expert",
+                    "value": 90
+                },
+                "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Visual_Studio_Code_1.35_icon.svg/2048px-Visual_Studio_Code_1.35_icon.svg.png"
+            },
+            "Android Studio": {
+                "knowledge": {
+                    "text": "expert",
+                    "value": 90
+                },
+                "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/Android_Studio_Logo_2024.svg/1200px-Android_Studio_Logo_2024.svg.png"
+            },
+            "Docker": {
+                "knowledge": {
+                    "text": "intermediate",
+                    "value": 40
+                },
+                "url": "https://upload.wikimedia.org/wikipedia/commons/e/ea/Docker_%28container_engine%29_logo_%28cropped%29.png"
+            },
+            "Kubernetes": {
+                "knowledge": {
+                    "text": "intermediate",
+                    "value": 40
+                },
+                "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/39/Kubernetes_logo_without_workmark.svg/1200px-Kubernetes_logo_without_workmark.svg.png"
+            }
+        }
+    }
+}

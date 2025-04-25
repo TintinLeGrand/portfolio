@@ -1,0 +1,132 @@
+{
+    "en_cours": {
+        "covoit": {
+            "name": "Covoit",
+            "technologies": [
+                "PhP",
+                "HTML",
+                "CSS"
+            ],
+            "frameworks": [
+                "Laravel",
+                "TailwindCSS",
+                "Flowbite"
+            ],
+            "workers": [
+                "TintinLeGrand"
+            ],
+            "image": "/projects/covoit.png",
+            "link": "https://covoit.jvaiscaennais.com"
+        },
+        "portfolio": {
+            "name": "Portfolio",
+            "technologies": [
+                "JavaScript",
+                "HTML",
+                "CSS",
+                "TypeScript"
+            ],
+            "frameworks": [
+                "Next.JS",
+                "TailwindCSS",
+                "Flowbite",
+                "Material design"
+            ],
+            "workers": [
+                "TintinLeGrand"
+            ],
+            "image": "/projects/portfolio.png",
+            "link": "https://jvaiscaennais.com"
+        },
+        "puissance4": {
+            "name": "Puissance 4",
+            "technologies": [
+                "Python"
+            ],
+            "frameworks": [
+                "Pygame"
+            ],
+            "workers": [
+                "TintinLeGrand",
+                "Dounet17",
+                "Evan-50"
+            ],
+            "image": "/bg/enoshima.jpg",
+            "link": "https://github.com/TintinLeGrand/puissance4_NSI"
+        },
+        "solution_trombinoscope": {
+            "name": "Solution trombinoscope",
+            "technologies": [
+                "C-sharp"
+            ],
+            "frameworks": [
+                "WPF"
+            ],
+            "workers": [
+                "TintinLeGrand",
+                "lenisrl"
+            ],
+            "image": "/bg/haunted.jpg",
+            "link": "https://github.com/TintinLeGrand/SolutionTrombinoscope"
+        },
+        "youteam": {
+            "name": "YouTeam",
+            "technologies": [
+                "PhP",
+                "JavaScript",
+                "HTML",
+                "CSS"
+            ],
+            "frameworks": [
+                "Laravel",
+                "TailwindCSS",
+                "Flowbite",
+                "Vue.js"
+            ],
+            "workers": [
+                "TintinLeGrand"
+            ],
+            "image": "/bg/landscape.jpg",
+            "link": "https://dev.youteam.jvaiscaennais.com"
+        }
+    },
+    "futurs" : {
+        "4kwizz" : {
+            "name": "4Kwizz",
+            "technologies": [
+                "JavaScript",
+                "HTML",
+                "CSS"
+            ],
+            "frameworks": [
+                "React",
+                "Next.js",
+                "Expo",
+                "TailwindCSS",
+                "Flowbite"
+            ],
+            "workers": [
+                "TintinLeGrand"
+            ],
+            "image": "/bg/plage.jpg"
+        },
+        "share_portfolio": {
+            "name": "Share my portfolio",
+            "technologies": [
+                "JavaScript",
+                "HTML",
+                "CSS"
+            ],
+            "frameworks": [
+                "React",
+                "Next.js",
+                "TailwindCSS",
+                "Flowbite"
+            ],
+            "workers": [
+                "TintinLeGrand"
+            ],
+            "image": "/bg/reflet.jpg"
+        }
+    }
+}
