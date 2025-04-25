@@ -11,6 +11,7 @@
   "dependencies": {
     "@heroui/react": "^2.7.5",
     "@nextui-org/react": "^2.6.11",
+    "@vercel/speed-insights": "^1.2.0",
     "dom-to-image": "^2.6.0",
     "flowbite-react": "^0.10.2",
     "html2canvas": "^1.4.1",
